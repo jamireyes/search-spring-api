@@ -7,8 +7,6 @@ export const useApiStore = defineStore("api", {
             loading: false,
             query: "",
             pagination: "",
-            sorting: "",
-            breadcrumbs: "",
             results: "",
         };
     },
@@ -33,9 +31,6 @@ export const useApiStore = defineStore("api", {
                     .then((response) => {
                         this.loading = false;
                         this.pagination = response && response.data.pagination;
-                        this.sorting = response && response.data.sorting;
-                        this.breadcrumbs =
-                            response && response.data.breadcrumbs;
                         this.results = response && response.data.results;
                     });
             } catch (error) {
