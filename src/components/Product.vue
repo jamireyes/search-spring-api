@@ -1,6 +1,6 @@
 <template>
     <div class="mb-5">
-        <img :src="image" :alt="name" />
+        <img :src="image" :alt="name" loading="lazy" />
         <div class="pt-4 text-sm text-center space-y-2">
             <p class="text-gray-600">
                 {{ name }}
