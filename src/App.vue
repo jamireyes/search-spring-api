@@ -1,4 +1,7 @@
 <template>
+    <div class="absolute z-10">
+        <Loading />
+    </div>
     <div class="container mx-auto">
         <div class="flex">
             <Navbar />
@@ -51,6 +54,7 @@
 <script setup>
 import Navbar from "./components/Navbar.vue";
 import Product from "./components/Product.vue";
+import Loading from "./components/icons/Loading.vue";
 import { FwbPagination } from "flowbite-vue";
 import { useApiStore } from "./stores/api";
 import { ref } from "vue";

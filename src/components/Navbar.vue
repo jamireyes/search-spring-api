@@ -26,7 +26,6 @@ const store = useApiStore();
 
 function search(query) {
     store.search(query);
-    console.log(store.data);
 }
 </script>
 
