@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "searchspring",
+      "source": "@searchspring/v1.0#600zhm1dls21lr28",
+      "integrity": "sha512-6d7hSviGM+wK6jHszEBkMhDu76+8YDZJjn+RKT7QJXsxVls8X9gJmrHRrlCj7IVlpQfjtTOSXyiIdlYbVBfg9A==",
+      "installerVersion": "6.1.2"
+    }
+  ]
+}
