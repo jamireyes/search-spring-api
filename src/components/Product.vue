@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-5">
+    <div class="mb-5 flex flex-col justify-center">
         <img :src="image" :alt="name" loading="lazy" />
         <div class="pt-4 text-sm text-center space-y-2">
             <p class="text-gray-600">
@@ -23,7 +23,6 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
 const props = defineProps(["name", "price", "msrp", "image"]);
 
 function currencyPrice(price) {
