@@ -89,27 +89,27 @@ const store = useApiStore();
 const categories = [
     {
         name: "Men",
-        image: "/src/assets/category/men.jpg",
+        image: new URL("/src/assets/category/men.jpg", import.meta.url),
     },
     {
         name: "Women",
-        image: "/src/assets/category/women.jpg",
+        image: new URL("/src/assets/category/women.jpg", import.meta.url),
     },
     {
         name: "Handbags",
-        image: "/src/assets/category/handbag.jpg",
+        image: new URL("/src/assets/category/handbag.jpg", import.meta.url),
     },
     {
         name: "Shoes",
-        image: "/src/assets/category/shoes.jpg",
+        image: new URL("/src/assets/category/shoes.jpg", import.meta.url),
     },
     {
         name: "Watches",
-        image: "/src/assets/category/Watch.jpg",
+        image: new URL("/src/assets/category/watch.jpg", import.meta.url),
     },
     {
         name: "Accessories",
-        image: "/src/assets/category/accessories.jpg",
+        image: new URL("/src/assets/category/accessories.jpg", import.meta.url),
     },
 ];
 
