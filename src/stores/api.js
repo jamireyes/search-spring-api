@@ -4,32 +4,30 @@ import axios from "axios";
 export const useApiStore = defineStore("api", {
     state: () => {
         return {
-            loading: false,
-            query: "",
+            params: "",
             pagination: "",
             results: "",
         };
     },
     actions: {
-        async search(query, page) {
-            this.query = query && query;
-            this.loading = true;
-
-            const params = {
+        async search(query) {
+            const config = {
                 siteId: "scmq7n",
                 resultsFormat: "native",
-                q: query,
-                page: page,
             };
+
+            let params = { ...config, ...this.params };
+
+            params = { ...params, ...query };
+            this.params = params;
 
             try {
                 await axios
                     .get(
-                        "https://api.searchspring.net/api/search/search.json",
+                        `https://${params.siteId}.a.searchspring.io/api/search/search.json`,
                         { params }
                     )
                     .then((response) => {
-                        this.loading = false;
                         this.pagination = response && response.data.pagination;
                         this.results = response && response.data.results;
                     });
