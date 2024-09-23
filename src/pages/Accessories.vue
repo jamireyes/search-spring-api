@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto pb-10">
+    <div class="container mx-auto md:px-4 lg:px-0 pb-10">
         <div class="banner full-bleed">
             <img
                 src="../assets/banner6.jpg"

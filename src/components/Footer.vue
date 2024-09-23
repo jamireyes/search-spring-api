@@ -1,8 +1,8 @@
 <template>
-    <footer class="w-full">
+    <footer class="w-full px-0 md:px-4 lg:px-0">
         <div class="border-y py-10">
             <div
-                class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-5 px-5 md:px-0"
+                class="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-5 md:px-0"
             >
                 <div class="flex flex-col space-y-1">
                     <h1 class="font-semibold mb-2">Shop</h1>
@@ -24,7 +24,7 @@
                     <a href="#" class="text-sm">Contact</a>
                     <a href="#" class="text-sm">Careers</a>
                 </div>
-                <div class="col-span-full md:col-auto">
+                <div class="col-span-full lg:col-auto">
                     <p>Sign up to our newsletter!</p>
                     <p class="text-xs text-gray-500 mt-1 mb-4">
                         Receive the latest updates, offers, coupons and more.

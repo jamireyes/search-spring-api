@@ -23,56 +23,58 @@
         />
     </div>
 
-    <!-- Category -->
-    <div class="mt-20 md:mt-40">
-        <div
-            class="mb-10 flex flex-col md:flex-row justify-between items-center"
-        >
-            <h1 class="text-3xl md:text-5xl font-bold tracking-wide mb-5">
-                Explore our
-                <span class="text-blue-700"> collections </span>
-            </h1>
-            <RouterLink to="/new-arrivals">
-                <fwb-button class="rounded-none" color="light" size="xl"
-                    >All Products</fwb-button
-                >
-            </RouterLink>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
+    <div class="md:px-4 lg:px-0">
+        <!-- Category -->
+        <div class="mt-20 md:mt-40">
             <div
-                v-for="category in categories"
-                :key="category"
-                class="flex flex-col justify-center items-center text-center transition duration-300 hover:scale-125 cursor-pointer"
+                class="mb-10 flex flex-col md:flex-row justify-between items-center"
             >
-                <img
-                    class="aspect-square object-cover object-center border border-gray-300"
-                    :src="category.image"
-                    :alt="category.name"
-                />
-                <span>
-                    {{ category.name }}
-                </span>
+                <h1 class="text-3xl md:text-5xl font-bold tracking-wide mb-5">
+                    Explore our
+                    <span class="text-blue-700"> collections </span>
+                </h1>
+                <RouterLink to="/new-arrivals">
+                    <fwb-button class="rounded-none" color="light" size="xl"
+                        >All Products</fwb-button
+                    >
+                </RouterLink>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+                <div
+                    v-for="category in categories"
+                    :key="category"
+                    class="flex flex-col justify-center items-center text-center transition duration-300 hover:scale-125 cursor-pointer"
+                >
+                    <img
+                        class="aspect-square object-cover object-center border border-gray-300"
+                        :src="category.image"
+                        :alt="category.name"
+                    />
+                    <span>
+                        {{ category.name }}
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="my-20 md:my-40">
-        <div class="text-center mb-10">
-            <h1 class="text-3xl md:text-5xl font-bold tracking-wide">
-                Our Best Sellers
-            </h1>
-            <p class="text-lg md:text-2xl font-semibold tracking-wide mt-5">
-                Upgrade your wardrobe to the next level!
-            </p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
-            <div v-for="item in store.results.slice(0, 5)">
-                <Product
-                    :name="item.name"
-                    :price="item.price"
-                    :msrp="item.msrp"
-                    :image="item.thumbnailImageUrl"
-                />
+        <!-- Best Sellers -->
+        <div class="my-20 md:my-40">
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-5xl font-bold tracking-wide">
+                    Our Best Sellers
+                </h1>
+                <p class="text-lg md:text-2xl font-semibold tracking-wide mt-5">
+                    Upgrade your wardrobe to the next level!
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+                <div v-for="item in store.results.slice(0, 6)">
+                    <Product
+                        :name="item.name"
+                        :price="item.price"
+                        :msrp="item.msrp"
+                        :image="item.thumbnailImageUrl"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -144,21 +146,4 @@ onUnmounted(() => {
     text-align: center;
     padding: 1rem;
 }
-
-/* @media (min-width: 768px) {
-    .banner {
-        position: relative;
-        height: 100%;
-    }
-
-    .banner-content {
-        position: absolute;
-        top: 2.5rem;
-        left: 0;
-        transform: none;
-        width: 100%;
-        text-align: left;
-        padding: 2.5rem;
-    }
-} */
 </style>
